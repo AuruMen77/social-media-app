@@ -8,7 +8,7 @@ interface PageProps {
   };
 }
 
-export function generateMetaData({ searchParams: { q } }: PageProps): Metadata {
+export function generateMetadata({ searchParams: { q } }: PageProps): Metadata {
   return {
     title: `Search results for "${q}`,
   };
