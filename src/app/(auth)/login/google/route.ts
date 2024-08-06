@@ -14,7 +14,7 @@ export async function GET() {
     path: "/",
     secure: process.env.NODE_ENV === "production",
     httpOnly: true,
-    maxAge: 60 * 10,
+    maxAge: 60 * 1000,
     sameSite: "lax",
   });
 
@@ -22,7 +22,7 @@ export async function GET() {
     path: "/",
     secure: process.env.NODE_ENV === "production",
     httpOnly: true,
-    maxAge: 60 * 10,
+    maxAge: 60 * 1000,
     sameSite: "lax",
   });
 
