@@ -9,7 +9,7 @@ import {
 } from "@/lib/validation";
 
 export async function updateUserProfile(values: UpdateUserProfileValues) {
-  const vlaidatedValues = updateUserProfileSchema.parse(values);
+  const validatedValues = updateUserProfileSchema.parse(values);
 
   const { user } = await validateRequest();
 
@@ -17,7 +17,7 @@ export async function updateUserProfile(values: UpdateUserProfileValues) {
 
   const updatedUser = await prisma.user.update({
     where: { id: user.id },
-    data: vlaidatedValues,
+    data: validatedValues,
     select: getUserDataSelect(user.id),
   });
 
